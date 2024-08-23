@@ -1,0 +1,12 @@
+{
+  "eslint.workingDirectories": ["./next-app"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "markuplint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "explicit"
+  },
+}

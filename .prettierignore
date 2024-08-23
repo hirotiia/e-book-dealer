@@ -1,0 +1,11 @@
+# text
+*.md
+*.txt
+*.csv
+package-lock.json
+
+#Dependency directories
+node_modules
+.next
+dist
+public
