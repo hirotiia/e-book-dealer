@@ -51,8 +51,8 @@ export const Book = () => {
 
   return (
     <div className="grid grid-cols-custom gap-10">
-      {MOCK_DATA.map((data) => (
-        <BookItem key={data.id} data={data} />
+      {MOCK_DATA.map((product) => (
+        <BookItem key={product.id} product={product} />
       ))}
     </div>
   );
