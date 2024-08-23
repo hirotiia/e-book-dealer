@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={notoSansJP.className}>
         <div className="">
           <Header />
-          {children}
+          <main>
+            <div className="col-start-2 col-end-3 grid gap-x-4">{children}</div>
+          </main>
           <Footer />
         </div>
       </body>
