@@ -3,31 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-padding-top: 100px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html,body {
+  height: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body > div {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  display: grid;
+  column-gap: 40px;
+  grid-area: header;
+  z-index: 2000;
+  grid-template-columns: 1fr minmax(335px,1220px) 1fr;
+}
+
+main {
+  display: grid;
+  column-gap: 40px;
+  grid-area: content;
+  grid-template-columns: 1fr minmax(335px,1220px) 1fr;
+  padding-block: 140px 80px;
+}
+
+footer {
+  display: grid;
+  column-gap: 40px;
+  grid-area: footer;
+  grid-template-columns: 1fr minmax(335px,1220px) 1fr;
 }
