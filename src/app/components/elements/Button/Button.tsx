@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 
 const button = cva(['cursor-pointer', 'hover:opacity-80'], {
   variants: {
-    valiant: {
+    variant: {
       primary: ['border', 'border-blue-500', 'bg-blue-500', 'text-white'],
       secondary: ['border', 'border-gray-500', 'bg-gray-500', 'text-white'],
     },
@@ -21,10 +21,11 @@ const button = cva(['cursor-pointer', 'hover:opacity-80'], {
     rounded: {
       true: ['rounded'],
     },
-    defaultVariants: {
-      variant: 'primary',
-      size: 'medium',
-    },
+  },
+  defaultVariants: {
+    variant: 'primary',
+    size: 'medium',
+    rounded: true,
   },
 });
 

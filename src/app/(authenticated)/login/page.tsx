@@ -10,7 +10,7 @@ export default function Login() {
   return (
     <>
       <HeadingLv2>ログインページ</HeadingLv2>
-      <Button visual="black" type="button" onClick={clickHandler}>
+      <Button type="button" onClick={clickHandler}>
         GitHub でログイン
       </Button>
     </>
