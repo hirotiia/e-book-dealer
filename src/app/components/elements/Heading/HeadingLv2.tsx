@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 type Props = {
-  title: string;
+  children: ReactNode;
 };
 
-export const HeadingLv2 = ({ title }: Props) => {
-  return <h2 className="pb-14 pt-6 text-center text-3xl font-bold">{title}</h2>;
+export const HeadingLv2 = ({ children }: Props) => {
+  return <h2 className="pb-14 pt-6 text-center text-3xl font-bold">{children}</h2>;
 };

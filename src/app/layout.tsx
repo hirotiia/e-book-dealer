@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="">
           <Header />
           <main>
-            <div className="col-start-2 col-end-3 grid gap-x-4">{children}</div>
+            <div className="col-start-2">{children}</div>
           </main>
           <Footer />
         </div>
