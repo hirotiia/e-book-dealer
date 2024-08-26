@@ -1,16 +1,15 @@
-import { button, type ButtonProps } from './ButtonClasses';
+import { button, type SpanProps, type ButtonProps } from './ButtonClasses';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export const Button = ({ as, className, children, ...rest }: ButtonProps) => {
+type CombinedProps = ButtonProps | SpanProps;
+
+export const Button = ({ as, className, children, ...rest }: CombinedProps) => {
   const buttonClassName = twMerge(button(rest), className);
-  return as !== 'span' ? (
-    <button className={buttonClassName} {...rest}>
+  const Comp = as !== 'span' ? 'button' : 'span';
+  return (
+    <Comp className={buttonClassName} {...rest}>
       {children}
-    </button>
-  ) : (
-    <span className={buttonClassName} {...rest}>
-      {children}
-    </span>
+    </Comp>
   );
 };

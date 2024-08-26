@@ -32,4 +32,10 @@ type ButtonProps = React.ComponentPropsWithRef<'button'> &
     children?: ReactNode;
   };
 
-export { type ButtonProps, button };
+type SpanProps = React.ComponentPropsWithRef<'span'> &
+  VariantProps<typeof button> & {
+    as?: 'span';
+    children?: ReactNode;
+  };
+
+export { type ButtonProps, type SpanProps, button };
