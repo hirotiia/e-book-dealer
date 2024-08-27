@@ -28,7 +28,6 @@ const button = cva(['cursor-pointer', 'hover:opacity-80', 'flex', 'items-center'
 
 type ButtonProps = React.ComponentPropsWithRef<'button'> &
   VariantProps<typeof button> & {
-    as?: 'span';
     children?: ReactNode;
   };
 
@@ -36,6 +35,7 @@ type SpanProps = React.ComponentPropsWithRef<'span'> &
   VariantProps<typeof button> & {
     as?: 'span';
     children?: ReactNode;
+    onClick?: never;
   };
 
 export { type ButtonProps, type SpanProps, button };

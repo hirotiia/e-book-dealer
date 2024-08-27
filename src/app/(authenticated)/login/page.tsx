@@ -5,14 +5,11 @@ import { HeadingLv2 } from '@/app/components/elements/Heading/HeadingLv2';
 import Link from 'next/link';
 
 export default function Login() {
-  const handler = () => {
-    console.log('handler');
-  };
   return (
     <>
       <HeadingLv2>ログインページ</HeadingLv2>
       <Link href={'/'}>
-        <Button as="span" type="button" onClick={handler}>
+        <Button as="span">
           <svg
             role="img"
             viewBox="0 0 24 24"
