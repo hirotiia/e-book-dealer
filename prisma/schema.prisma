@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// コマンド実行時どのようなアセットが作成されるかを定義
+generator client {
+  provider = "prisma-client-js"
+}
+
+// prismaがどのようにDBに接続するかを定義
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model User {
+  id            String       @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime? @map(name: "email_verified")
+  image         String?
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+  purchases     Purchase[]
+}
+
+model Purchase {
+  id            String       @id @default(cuid())
+  userId        String
+  bookId        String
+  createdAt     DateTime @default(now())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

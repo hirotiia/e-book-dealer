@@ -27,7 +27,7 @@ export const BookItem = ({ product }: Props) => {
   return (
     <Link
       href={'/articles'}
-      className="row-span-4 grid grid-rows-subgrid gap-3 overflow-hidden rounded-lg pb-3 shadow-2xl duration-300 hover:translate-y-1 hover:shadow-none"
+      className="row-span-4 grid grid-rows-subgrid gap-3 overflow-hidden rounded-lg pb-3 shadow-md duration-300 hover:scale-105"
     >
       <Image
         src={product.thumbnail}

@@ -1,3 +1,5 @@
+'use client';
+
 import { button, type SpanProps, type ButtonProps } from './ButtonClasses';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
