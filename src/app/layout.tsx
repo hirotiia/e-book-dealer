@@ -1,3 +1,4 @@
+import { notoJP, openSans } from '@/utils/font/font';
 import './globals.css';
 
 export default function RootLayout({
@@ -5,5 +6,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <>
+      <html lang="ja">
+        <body className={`${notoJP.variable} ${openSans.className} text-black`}>{children}</body>
+      </html>
+    </>
+  );
 }

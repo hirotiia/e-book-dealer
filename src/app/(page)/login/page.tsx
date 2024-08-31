@@ -1,10 +1,10 @@
 import { HeadingLv1 } from '@/components/layouts/Heading/HeadingLv1';
 import { getProviders } from 'next-auth/react';
-import { UserLogin } from './UserLogin';
 import { Metadata } from 'next';
 import { Footer } from '@/components/layouts/Footer/Footer';
 import { Header } from '@/components/layouts/Header/Header';
 import { Breadcrumb } from '@/components/layouts/Breadcrumb/Breadcrumb';
+import { UserLogin } from '@/app/lib/next-auth/providers/user-login';
 
 export const metadata: Metadata = {
   title: 'ログイン ｜ E-Book dealer',
