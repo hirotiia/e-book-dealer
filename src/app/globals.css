@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .fade-hover {
+    @apply transition-opacity duration-300 ease-out;
+  }
+
+  .fade-hover:hover {
+    @apply opacity-6;
+  }
+}
+
 :root {
   box-sizing: border-box;
 }
@@ -18,11 +28,20 @@ body > div {
   display: grid;
   grid-template-areas:
     "header"
+    "breadcrumb"
     "content"
     "footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   height: 100%;
   width: 100%;
+}
+
+header + div {
+  display: grid;
+  column-gap: 40px;
+  grid-area: breadcrumb;
+  grid-template-columns: 1fr minmax(335px,1220px) 1fr;
+  padding-top: 120px;
 }
 
 header {
@@ -38,7 +57,7 @@ main {
   column-gap: 40px;
   grid-area: content;
   grid-template-columns: 1fr minmax(335px,1220px) 1fr;
-  padding-block: 140px 80px;
+  padding-block: 70px 80px;
 }
 
 footer {

@@ -7,6 +7,7 @@ export const authOptions: NextAuthOptions = {
   debug: false,
   providers: [
     GitHubProvider({
+      // GitHubのDeveloper Settingsで設定した値
       clientId: process.env.GITHUB_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
     }),

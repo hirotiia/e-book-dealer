@@ -36,11 +36,11 @@ export const BookItem = ({ product }: Props) => {
         height={250}
         className="w-full"
       />
-      <p className="px-3 text-lg">
+      <p className="font-advent px-3 text-lg">
         <b>{product.title}</b>
       </p>
       <p className="px-3">{product.content}</p>
-      <p className="px-3 text-slate-400">価格：{product.price}円</p>
+      <p className="text-slate-400 px-3 font-notoJP">価格：{product.price}円</p>
     </Link>
   );
 };
