@@ -5,6 +5,7 @@ import { Footer } from '@/components/layouts/Footer/Footer';
 import { Header } from '@/components/layouts/Header/Header';
 import { Breadcrumb } from '@/components/layouts/Breadcrumb/Breadcrumb';
 import { ReactElement } from 'react';
+import { getBookItems } from '@/app/lib/microcms/client';
 
 export const metadata: Metadata = {
   title: '商品一覧 ｜ E-Book dealer',
@@ -13,6 +14,8 @@ export const metadata: Metadata = {
 
 export default async function Home(): Promise<ReactElement> {
   const URL = process.env.NEXT_PUBLIC_URL;
+  const bookItems = (await getBookItems()).contents;
+  console.log(bookItems);
   return (
     <>
       <Header />

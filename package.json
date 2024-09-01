@@ -17,6 +17,7 @@
     "@prisma/client": "5.18.0",
     "@vercel/postgres": "^0.9.0",
     "class-variance-authority": "0.7.0",
+    "microcms-js-sdk": "3.1.2",
     "next": "14.2.5",
     "next-auth": "4.24.7",
     "react": "18.3.1",
