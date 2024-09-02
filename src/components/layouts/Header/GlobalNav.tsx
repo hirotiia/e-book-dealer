@@ -17,7 +17,7 @@ export const GloabalNav = () => {
           </Link>
         </li>
         <li>
-          <Link href="/profile" className="rounded-md px-3 py-2 font-medium">
+          <Link href="/profile" className="fade-hover rounded-md px-3 py-2 font-medium">
             <Image
               className="rounded-full"
               width={50}

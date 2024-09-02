@@ -10,6 +10,13 @@
   .fade-hover:hover {
     @apply opacity-6;
   }
+
+  .txt-limit {
+    @apply overflow-hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }
 
 :root {
@@ -25,7 +32,7 @@ html,body {
 }
 
 body {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 body > div {

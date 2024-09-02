@@ -21,7 +21,7 @@ export default async function Login() {
       <Breadcrumb items={[{ pathname: URL, title: '商品一覧' }, { title: 'ログイン' }]} />
       <main>
         <div className="col-start-2">
-          <HeadingLv1 className="font-notoJP">ログイン</HeadingLv1>
+          <HeadingLv1>ログイン</HeadingLv1>
           {providers &&
             Object.values(providers).map((provider) => (
               <UserLogin key={provider.id} providerId={provider.id} />

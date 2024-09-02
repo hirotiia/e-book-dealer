@@ -1,4 +1,4 @@
-import { EBookResponse } from '@/app/api/microcms/types';
+import { CMSResponse } from '@/app/api/microcms/types';
 import { createClient } from 'microcms-js-sdk';
 
 const client = createClient({
@@ -6,7 +6,7 @@ const client = createClient({
   apiKey: process.env.MICROCMS_API_KEY!,
 });
 
-export const getBookItems = async (): Promise<EBookResponse> => {
+export const getBookItems = async (): Promise<CMSResponse> => {
   const allEBooks = await client.getList({
     endpoint: 'e-book',
   });

@@ -1,5 +1,3 @@
-import { MicroCMSListResponse } from 'microcms-js-sdk';
-
 export type Content = {
   id: string;
   createdAt: string;
@@ -16,11 +14,9 @@ export type Content = {
   };
 };
 
-type CMSResponse = {
+export type CMSResponse = {
   contents: Content[];
   totalCount: number;
   offset: number;
   limit: number;
 };
-
-export type EBookResponse = MicroCMSListResponse<CMSResponse>;
