@@ -6,6 +6,7 @@ type Props = {
 };
 
 export const Books = ({ dataList }: Props) => {
+  console.log('Booksコンポーネントがレンダリングされました。');
   return (
     <div className="grid grid-cols-custom gap-10">
       {dataList.map((item) => (

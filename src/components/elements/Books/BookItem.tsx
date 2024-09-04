@@ -9,7 +9,7 @@ type Props = {
 export const BookItem = ({ item }: Props) => {
   return (
     <Link
-      href={'/articles'}
+      href={`/articles/${item.id}`}
       className="row-span-4 grid grid-rows-subgrid gap-3 overflow-hidden rounded-lg pb-3 shadow-md duration-300 hover:scale-105"
     >
       <Image
