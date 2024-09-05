@@ -9,10 +9,10 @@ type Props = {
   params: { id: string };
 };
 
-// TODO: 動的にメタデータを出力する
+// TODO: 動的にメタデータを出力するためにContextでの状態管理に限界を感じてきたので、Reduxでグローバルステートの管理を検討中
 export const metadata: Metadata = {
-  title: '商品詳細 ｜ E-Book dealer',
-  description: '商品詳細ページです。',
+  title: 'ダミー ｜ E-Book dealer',
+  description: 'ダミーページです。',
 };
 
 export default async function Home({ params }: Props): Promise<ReactElement> {

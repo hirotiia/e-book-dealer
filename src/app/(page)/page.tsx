@@ -5,6 +5,7 @@ import { Header } from '@/components/layouts/Header/Header';
 import { Breadcrumb } from '@/components/layouts/Breadcrumb/Breadcrumb';
 import { Products } from '@/components/elements/Products/products';
 import { ReactElement } from 'react';
+import { Effect } from '@/hooks/effect/effect';
 
 export const metadata: Metadata = {
   title: '商品一覧 ｜ E-Book dealer',
@@ -22,6 +23,7 @@ export default async function Home(): Promise<ReactElement> {
         <div className="col-start-2">
           <HeadingLv1>商品一覧</HeadingLv1>
           <Products />
+          <Effect />
         </div>
       </main>
       <Footer />

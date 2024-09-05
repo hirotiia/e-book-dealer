@@ -13,7 +13,9 @@ type Props = {
 export const Articles = ({ params }: Props) => {
   const contents = useContext(CMSContext);
   const articleData = contents.find((content) => content.id === params.id);
-  console.log(articleData);
+  const handlePurchase = () => {
+    console.log('購入');
+  };
   return (
     <div>
       {articleData && (
@@ -27,7 +29,9 @@ export const Articles = ({ params }: Props) => {
       {articleData && <HeadingLv1 className="text-[32px]">{articleData.title}</HeadingLv1>}
       {articleData && <p>{articleData.description}</p>}
       {articleData && <p>{`価格：${articleData.price}円`}</p>}
-      <Button type="button">購入する</Button>
+      <Button type="button" onClick={handlePurchase}>
+        購入する
+      </Button>
     </div>
   );
 };
