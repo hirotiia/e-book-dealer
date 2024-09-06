@@ -1,6 +1,7 @@
 import { Breadcrumb } from '@/components/layouts/Breadcrumb/Breadcrumb';
 import { Footer } from '@/components/layouts/Footer/Footer';
 import { Header } from '@/components/layouts/Header/Header';
+import { Article } from '@/features/articles/components/article/article';
 import { Metadata } from 'next';
 import { ReactElement } from 'react';
 
@@ -16,14 +17,15 @@ export const metadata: Metadata = {
 
 export default async function Home({ params }: Props): Promise<ReactElement> {
   const URL = process.env.NEXT_PUBLIC_URL;
-  console.log(params);
 
   return (
     <>
       <Header />
       <Breadcrumb items={[{ pathname: URL, title: '商品一覧' }]} />
       <main>
-        <div className="col-start-2"></div>
+        <div className="col-start-2">
+          <Article params={params} />
+        </div>
       </main>
       <Footer />
     </>

@@ -2,7 +2,7 @@
 import { Panel } from '@/components/elements/panel/panel';
 import { useArticleData } from '@/hooks/useArticleData';
 
-export const Articles = () => {
+export const Products = () => {
   const contents = useArticleData();
   return (
     <>
