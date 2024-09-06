@@ -4,10 +4,11 @@ import { Footer } from '@/components/layouts/Footer/Footer';
 import { Header } from '@/components/layouts/Header/Header';
 import { Breadcrumb } from '@/components/layouts/Breadcrumb/Breadcrumb';
 import { ReactElement } from 'react';
+import { Articles } from '@/features/articles/components/articles/articles';
 
 export const metadata: Metadata = {
-  title: 'E-Book dealer',
-  description: 'トップページです。',
+  title: '商品一覧 ｜ E-Book dealer',
+  description: '商品一覧ページです。',
 };
 
 export default async function Home(): Promise<ReactElement> {
@@ -16,10 +17,11 @@ export default async function Home(): Promise<ReactElement> {
   return (
     <>
       <Header />
-      <Breadcrumb items={[{ pathname: URL, title: 'HOME' }]} />
+      <Breadcrumb items={[{ pathname: URL, title: '商品一覧' }]} />
       <main>
         <div className="col-start-2">
-          <HeadingLv1>E-Book-dealerとは</HeadingLv1>
+          <HeadingLv1>商品一覧</HeadingLv1>
+          <Articles />
         </div>
       </main>
       <Footer />

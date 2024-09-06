@@ -1,4 +1,4 @@
-import { CMSResponse } from '@/app/api/microcms/types';
+import { CMSResponse } from '@/types/api/micorcms.types';
 import { createClient } from 'microcms-js-sdk';
 
 const client = createClient({
@@ -7,7 +7,6 @@ const client = createClient({
 });
 
 export const getBookItems = async (): Promise<CMSResponse> => {
-  console.log('getBookItemsが呼び出されました。');
   const allEBooks = await client.getList({
     endpoint: 'e-book',
   });
