@@ -15,7 +15,9 @@ export default async function RootLayout({
       <html lang="ja">
         <body className={`${notoJP.variable} ${openSans.className} text-black`}>
           <ContextProvider value={contents}>
-            <AuthProvider>{children}</AuthProvider>
+            <AuthProvider>
+              <div>{children}</div>
+            </AuthProvider>
           </ContextProvider>
         </body>
       </html>
