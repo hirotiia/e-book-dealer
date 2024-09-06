@@ -14,7 +14,7 @@ export const Panel = ({ id, title, desc, price, imagePath, publishedDate }: Prop
   return (
     <Link
       href={`/articles/${id}`}
-      className="row-span-4 grid grid-rows-subgrid gap-3 overflow-hidden rounded-lg pb-3 shadow-md duration-300 hover:scale-105"
+      className="row-span-5 grid grid-rows-subgrid gap-3 overflow-hidden rounded-lg pb-3 shadow-md duration-300 hover:scale-105"
     >
       <Image src={imagePath} alt="" width={350} height={250} className="w-full" />
       <p className="px-3 text-2xl">

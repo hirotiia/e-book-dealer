@@ -72,7 +72,6 @@ E-Book-dealer is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 
 e-book-dealer/
-├── dist
 ├── out
 ├── prisma　　　　　　 # prisma設定ファイル
 │   ├── migrations
