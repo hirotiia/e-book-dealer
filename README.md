@@ -70,7 +70,7 @@ E-Book-dealer is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 <h2 id="heading-06">ディレクトリ構成</h2>
 
-
+```
 e-book-dealer/
 ├── out
 ├── prisma　　　　　　 # prisma設定ファイル
@@ -95,6 +95,7 @@ e-book-dealer/
         └── (something)  # src/app/(page)のディレクトリに対応させる（例：/features/login/など）
             └── components
             └── layouts
+```
 
 <h2 id="heading-07">注意</h2>
 
