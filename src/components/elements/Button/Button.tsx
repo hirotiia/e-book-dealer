@@ -1,6 +1,6 @@
 'use client';
 
-import { buttonVariants, type SpanProps, type ButtonProps } from './ButtonTypes';
+import { ButtonProps, SpanProps, buttonVariants } from '@/types/button/button.types';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { XOR } from 'ts-xor';

@@ -3,7 +3,7 @@ import { HeadingLv1 } from '@/components/layouts/Heading/HeadingLv1';
 import { Footer } from '@/components/layouts/Footer/Footer';
 import { Header } from '@/components/layouts/Header/Header';
 import { Breadcrumb } from '@/components/layouts/Breadcrumb/Breadcrumb';
-import { ReactElement } from 'react';
+import { ReactElement, Suspense } from 'react';
 import { Products } from '@/features/articles/components/products/products';
 
 export const metadata: Metadata = {
@@ -21,7 +21,9 @@ export default async function Home(): Promise<ReactElement> {
       <main>
         <div className="col-start-2">
           <HeadingLv1>商品一覧</HeadingLv1>
-          <Products />
+          <Suspense fallback={<div>loading...</div>}>
+            <Products />
+          </Suspense>
         </div>
       </main>
       <Footer />

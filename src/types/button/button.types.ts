@@ -9,7 +9,9 @@ const buttonVariants = cva(
         primary: [
           'border border-black transition duration-300 ease-out hover:bg-black hover:text-white',
         ],
-        error: ['border border-red'],
+        error: [
+          'border border-red text-red transition duration-300 ease-out hover:bg-red hover:text-white',
+        ],
       },
       size: {
         sm: ['px-3', 'py-2', 'text-sm'],

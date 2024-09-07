@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 const config = {
-  content: ['./src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: [
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/features/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/types/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     screens: {
       sm: '480px',
