@@ -17,12 +17,20 @@ export type Article = {
   };
 } & MicroCMSDate;
 
+if (!process.env.MICROCMS_SERVICE_DOMAIN) {
+  throw new Error('MICROCMS_SERVICE_DOMAIN is required');
+}
+
+if (!process.env.MICROCMS_API_KEY) {
+  throw new Error('MICROCMS_API_KEY is required');
+}
+
 const client = createClient({
-  serviceDomain: 'e-book-dealer',
-  apiKey: process.env.MICROCMS_API_KEY!,
+  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+  apiKey: process.env.MICROCMS_API_KEY,
 });
 
-export const getBookItems = async (): Promise<MicroCMSListResponse<Article>> => {
+export const getArticleList = async (): Promise<MicroCMSListResponse<Article>> => {
   const listData = await client.getList<Article>({
     endpoint: 'e-book',
   });

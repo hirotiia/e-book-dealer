@@ -1,9 +1,8 @@
-'use client';
+import { getArticleList } from '@/app/lib/microcms/client';
 import { Panel } from '@/components/elements/panel/panel';
-import { useArticleData } from '@/hooks/useArticleData';
 
-export const Products = () => {
-  const contents = useArticleData();
+export const Products = async () => {
+  const { contents } = await getArticleList();
   return (
     <>
       <div className="grid grid-cols-custom gap-10">
