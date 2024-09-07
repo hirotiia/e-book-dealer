@@ -7,9 +7,9 @@ const client = createClient({
 });
 
 export const getBookItems = async (): Promise<CMSResponse> => {
-  const allEBooks = await client.getList({
+  const listData = await client.getList({
     endpoint: 'e-book',
   });
 
-  return allEBooks;
+  return listData;
 };
