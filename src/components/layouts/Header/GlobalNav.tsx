@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { authOptions } from '@/app/lib/next-auth/options';
 import { getServerSession } from 'next-auth';
+import { Button } from '@/components/elements/Button/Button';
 
 export const GloabalNav = async () => {
   const session = await getServerSession(authOptions);
@@ -19,14 +20,7 @@ export const GloabalNav = async () => {
           </Link>
         </li>
         <li>
-          {user ? (
-            <Link
-              href="/logout/"
-              className="fade-hover rounded-md px-3 py-2 font-notoJP font-medium text-red"
-            >
-              ログアウト
-            </Link>
-          ) : (
+          {!user && (
             <Link
               href="/login/"
               className="fade-hover rounded-md px-3 py-2 font-notoJP font-medium"
@@ -36,7 +30,11 @@ export const GloabalNav = async () => {
           )}
         </li>
         <li>
-          <Link href="/profile" className="fade-hover rounded-md px-3 py-2 font-medium">
+          <Button
+            className="fade-hover rounded-md px-3 py-2 font-medium"
+            variant={'clear'}
+            size={'auto'}
+          >
             <Image
               className="rounded-full"
               width={50}
@@ -44,7 +42,7 @@ export const GloabalNav = async () => {
               alt="デフォルトアイコン"
               src={user?.image || '/default_icon.png'}
             />
-          </Link>
+          </Button>
         </li>
       </ul>
     </nav>

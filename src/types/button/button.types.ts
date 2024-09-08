@@ -12,10 +12,12 @@ const buttonVariants = cva(
         error: [
           'border border-red text-red transition duration-300 ease-out hover:bg-red hover:text-white',
         ],
+        clear: [],
       },
       size: {
+        auto: [],
         sm: ['px-3', 'py-2', 'text-sm'],
-        md: ['px-6', 'py-3', 'text-xl', 'min-w-[500px]'],
+        md: ['px-6', 'py-3', 'text-xl', 'min-w-[300px]', 'md:min-w-[500px]'],
         lg: ['px-8', 'py-3', 'text-xl', 'min-w-full'],
       },
       disabled: {
