@@ -7,17 +7,22 @@ type Item = {
   title: string;
 };
 
-type Props = {
-  items: Item[];
-};
-
-export const Breadcrumb = ({ items }: Props) => {
+export const Breadcrumb = ({ items }: { items: Item[] }) => {
   return (
     <div>
       <ol className="col-start-2 flex gap-2">
         {items.map(({ pathname, title }, i) => (
           <li key={title}>
-            {items.length === i + 1 ? title : <Link href={pathname!}>{title}</Link>}
+            {items.length === i + 1 ? (
+              title
+            ) : (
+              <Link
+                href={pathname!}
+                className="duration-300 ease-out hover:underline hover:opacity-6"
+              >
+                {title}
+              </Link>
+            )}
           </li>
         ))}
       </ol>

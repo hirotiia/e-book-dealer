@@ -56,7 +56,7 @@ export const Dialog = ({
               isOpen && closeDialog();
             }}
           >
-            close
+            閉じる
           </Button>
         </div>
       </div>

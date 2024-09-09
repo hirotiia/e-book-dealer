@@ -17,7 +17,7 @@ export default async function Home(): Promise<ReactElement> {
   return (
     <>
       <Header />
-      <Breadcrumb items={[{ pathname: URL, title: '商品一覧' }]} />
+      <Breadcrumb items={[{ pathname: URL, title: 'HOME' }, { title: '商品一覧' }]} />
       <main>
         <div className="col-start-2">
           <HeadingLv1>商品一覧</HeadingLv1>
