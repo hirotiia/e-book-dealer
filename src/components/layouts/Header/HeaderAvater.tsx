@@ -39,13 +39,13 @@ export const HeaderAvater = ({
           src={url || '/default_icon.png'}
         />
       </Button>
-      <Dialog isOpen={isOpen} close={close} open={open}>
+      <Dialog isOpen={isOpen} close={close} open={open} label="heading1" desc="desc1">
         {isLogin ? (
           <>
-            <p>
+            <p id="heading1">
               <b>アカウント情報</b>
             </p>
-            <dl className="mt-4">
+            <dl className="mt-4" id="desc1">
               <dt className="font-bold">名前：</dt>
               <dd>{name}</dd>
               <dt className="mt-1 font-bold">メールアドレス：</dt>
