@@ -8,7 +8,7 @@ export const UserLogout = () => {
 
   return (
     <div className="grid w-full place-content-center">
-      <Button type="button" variant={'error'} onClick={UserSignOutHandler}>
+      <Button type="button" rounded variant={'error'} onClick={UserSignOutHandler}>
         ログアウト する
       </Button>
     </div>

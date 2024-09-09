@@ -30,11 +30,14 @@ export const GloabalNav = async () => {
           </li>
         )}
 
-        {user?.image && (
-          <li>
-            <HeaderAvater url={user.image} />
-          </li>
-        )}
+        <li>
+          <HeaderAvater
+            url={user?.image ? user.image : '/default_icon.png'}
+            status={user?.image ? 'login' : 'logout'}
+            name={user && user.name}
+            email={user && user.email}
+          />
+        </li>
       </ul>
     </nav>
   );

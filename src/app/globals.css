@@ -18,6 +18,10 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
+
+  .clip-path-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
 }
 
 :root {

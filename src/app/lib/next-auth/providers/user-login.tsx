@@ -12,7 +12,7 @@ export const UserLogin = ({ providerId }: Props) => {
 
   return (
     <div className="grid w-full place-content-center">
-      <Button type="button" onClick={UserSignInHandler}>
+      <Button type="button" rounded onClick={UserSignInHandler}>
         <svg
           role="img"
           viewBox="0 0 24 24"

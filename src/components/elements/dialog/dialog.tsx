@@ -29,20 +29,23 @@ export const Dialog = ({
   }, [isOpen, open, close]);
 
   const closeDialog = () => {
-    console.log(`closeDialog:お呼びでやんすか！`);
     if (isOpen) {
       close();
       dialog.current?.close();
     }
-    console.log(isOpen);
   };
   return (
-    <dialog ref={dialog}>
+    <dialog
+      ref={dialog}
+      className="after:clip-path-triangle before:clip-path-triangle absolute left-[calc(-300px+74px)] top-[90px] m-0 min-w-[300px] rounded-md border-2 border-black before:absolute before:right-5 before:top-[-30px] before:size-[30px] before:bg-black before:content-[''] after:absolute after:right-5 after:top-[-26px] after:size-[30px] after:bg-white after:content-['']"
+    >
       <div className="">
-        {children}
+        <div className="p-3">{children}</div>
         <div className="">
           <Button
             type="button"
+            className="w-full justify-center border-x-0 border-b-0 border-t-2 border-black"
+            size="auto"
             onClick={() => {
               isOpen && closeDialog();
             }}
