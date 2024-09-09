@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/** TODO：@applyの使用は控えるべきとのことだったので記述を変更する */
+/** TODO：公式ドキュメントによると@applyの使用は控えるべきとのことだったので記述を変更する */
 @layer utilities {
   .fade-hover {
     @apply transition-opacity duration-300 ease-out;
