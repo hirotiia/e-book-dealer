@@ -30,6 +30,7 @@ export const HeaderAvater = ({
         onClick={() => {
           isOpen ? close() : open();
         }}
+        aria-haspopup="dialog"
       >
         <Image
           className="rounded-full"

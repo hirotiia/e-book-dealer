@@ -28,8 +28,6 @@ export const Dialog = ({
       close();
       dialog.current?.close();
     }
-
-    return console.log(isOpen);
   }, [isOpen, open, close]);
 
   const closeDialog = () => {

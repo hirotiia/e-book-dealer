@@ -18,7 +18,7 @@ export const Article = async ({ params }: Props) => {
           <HeadingLv1>{article.title}</HeadingLv1>
           <time>{article.publishedAt}</time>
           <p>{article.description}</p>
-          <p>{`価格：${article.price}`}</p>
+          <p>{`価格：${article.price}円`}</p>
         </>
       )}
     </>
