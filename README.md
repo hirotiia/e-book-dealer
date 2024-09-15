@@ -1,6 +1,4 @@
-# 名前
-
- E-Book-dealer
+# E-Book-dealer
 
 電子記事を購入したり販売できるアプリケーションです。
 
