@@ -4,7 +4,7 @@ import Stripe from 'stripe';
 
 export async function POST(request: Request) {
   const { title, price, bookId, useId } = await request.json();
-  console.log(title, price);
+
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
