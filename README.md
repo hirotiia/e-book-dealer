@@ -101,4 +101,5 @@ e-book-dealer/
 
 <ul>
 <li>componentディレクトリ内でデータの取得は行わないでください。できる限りページでデータの取得を行うようにし、コンポーネントはpropsを受け取るだけにとどめてください。</li>
+<li>Stripeはテスト環境を使用しています。そのため、以下<a href='https://docs.stripe.com/testing#cards' target='_blank'>テスト用のカード情報を使用して決済機能を試すことができます。</li>
 </ul>
