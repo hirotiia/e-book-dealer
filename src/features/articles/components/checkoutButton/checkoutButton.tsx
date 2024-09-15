@@ -1,19 +1,30 @@
-import { Button } from '@/components/elements/Button/Button';
-import { Article } from 'schema-dts';
+'use client';
 
-export const CheckoutButton = ({ article }) => {
+import { Button } from '@/components/elements/Button/Button';
+import { Article } from '@/types/microcms/client.types';
+import { useRouter } from 'next/navigation';
+
+export const CheckoutButton = ({ article }: { article: Article }) => {
+  const router = useRouter();
   // 決済処理
   const checkoutHandler = async () => {
-    const response = await fetch('/api/checkout/', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout/`, {
       method: 'POST',
-      headers: { 'Content-Tyep': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         title: article?.title,
         price: article?.price,
       }),
     });
-    const responseJson = await response.json();
-    console.log(responseJson);
+
+    if (response.ok) {
+      const responseData: { checkout_url: string } = await response.json();
+      router.push(responseData.checkout_url);
+    }
   };
-  return <Button type="button" onClick={checkoutHandler} />;
+  return (
+    <Button type="button" rounded onClick={checkoutHandler}>
+      購入する
+    </Button>
+  );
 };

@@ -1,21 +1,5 @@
 import { createClient, MicroCMSListResponse } from 'microcms-js-sdk';
-import type { MicroCMSDate } from 'microcms-js-sdk';
-
-export type Article = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  title: string;
-  description: string;
-  price: number;
-  thumbnail: {
-    url: string;
-    height: number;
-    width: number;
-  };
-} & MicroCMSDate;
+import { Article } from '@/types/microcms/client.types';
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');

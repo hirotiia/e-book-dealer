@@ -1,7 +1,7 @@
 import { Breadcrumb } from '@/components/layouts/Breadcrumb/Breadcrumb';
 import { Footer } from '@/components/layouts/Footer/Footer';
 import { Header } from '@/components/layouts/Header/Header';
-import { Article } from '@/features/articles/components/article/article';
+import { ArticlePage } from '@/features/articles/components/article/article';
 import { Metadata } from 'next';
 import { ReactElement, Suspense } from 'react';
 
@@ -25,7 +25,7 @@ export default async function Home({ params }: Props): Promise<ReactElement> {
       <main>
         <div className="col-start-2">
           <Suspense fallback={<div>loading...</div>}>
-            <Article params={params} />
+            <ArticlePage params={params} />
           </Suspense>
         </div>
       </main>
