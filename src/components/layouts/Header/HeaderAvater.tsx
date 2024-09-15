@@ -49,7 +49,7 @@ export const HeaderAvater = ({
             <dl className="mt-4" id="desc1">
               <dt className="font-bold">名前：</dt>
               <dd>{name}</dd>
-              <dt className="mt-1 font-bold">メールアドレス：</dt>
+              <dt className="mt-1 font-bold">メールアドレス:</dt>
               <dd>{email}</dd>
             </dl>
             <Button
@@ -71,7 +71,10 @@ export const HeaderAvater = ({
               <b>アカウント情報</b>
             </p>
 
-            <p>ステータス：未ログイン</p>
+            <dl>
+              <dt className="font-bold">ステータス：</dt>
+              <dd>未ログイン</dd>
+            </dl>
           </>
         )}
       </Dialog>
