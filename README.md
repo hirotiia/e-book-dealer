@@ -105,4 +105,5 @@ e-book-dealer/
 </ul>
 
 <h2 id="heading-08">その他ドキュメント</h2>
-[開発者向け情報](/developer.md)
+
+- [開発者向け情報](/developer.md)
