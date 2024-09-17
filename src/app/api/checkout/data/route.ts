@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
     if (!session.client_reference_id || !session.metadata?.bookId) {
-      return NextResponse.json({ error: 'Invalid session data' }, { status: 400 });
+      return NextResponse.json({ error: 'Invalid session data' }, { status: 500 });
     }
 
     const isAlreadyPaid = await prisma.purchase.findFirst({
@@ -30,6 +30,8 @@ export async function POST(request: Request) {
           bookId: session.metadata.bookId,
         },
       });
+
+      console.log(purchase);
 
       return NextResponse.json({ purchase });
     }

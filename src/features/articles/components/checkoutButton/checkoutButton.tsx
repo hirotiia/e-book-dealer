@@ -14,6 +14,8 @@ export const CheckoutButton = ({ article }: { article: Article }) => {
       body: JSON.stringify({
         title: article?.title,
         price: article?.price,
+        articleId: article?.id,
+        userId: // TODO: ここにUSER.IDを渡す。
       }),
     });
 
