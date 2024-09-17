@@ -9,6 +9,8 @@
 - [使い方](#heading-04)
 - [ライセンス](#heading-05)
 - [ディレクトリ構成](#heading-06)
+- [注意](#heading-07)
+- [その他ドキュメント](#heading-08)
 
 
 <h2 id="heading-01">使用技術一覧</h2>
@@ -101,3 +103,6 @@ e-book-dealer/
 <li>componentディレクトリ内でデータの取得は行わないでください。できる限りページでデータの取得を行うようにし、コンポーネントはpropsを受け取るだけにとどめてください。</li>
 <li>Stripeはテスト環境を使用しています。そのため、<a href='https://docs.stripe.com/testing#cards' target='_blank'>テスト用のカード情報</a>を使用して決済機能を試すことができます。</li>
 </ul>
+
+<h2 id="heading-08">その他ドキュメント</h2>
+[開発者向け情報](/developer.md)
