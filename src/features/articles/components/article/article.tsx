@@ -2,9 +2,13 @@ import { getArticleList } from '@/app/lib/microcms/client';
 import { HeadingLv1 } from '@/components/layouts/Heading/HeadingLv1';
 import Image from 'next/image';
 import { CheckoutButton } from '../checkoutButton/checkoutButton';
+import { authOptions } from '@/app/lib/next-auth/options';
+import { getServerSession } from 'next-auth';
 
 export const ArticlePage = async ({ params }: { params: { id: string } }) => {
   const { contents } = await getArticleList();
+  const session = await getServerSession(authOptions);
+  const user = session?.user;
   const article = contents.find((content) => content.id === params.id);
 
   return (
@@ -16,8 +20,7 @@ export const ArticlePage = async ({ params }: { params: { id: string } }) => {
           <time>{article.publishedAt}</time>
           <p>{article.description}</p>
           <p>{`価格：${article.price}円`}</p>
-
-          <CheckoutButton article={article} />
+          <CheckoutButton article={article} userId={user?.id} />
         </>
       )}
     </>

@@ -5,17 +5,13 @@ import { ArticlePage } from '@/features/articles/components/article/article';
 import { Metadata } from 'next';
 import { ReactElement, Suspense } from 'react';
 
-type Props = {
-  params: { id: string };
-};
-
 // TODO: 動的にメタデータを出力するためにContextでの状態管理に限界を感じてきたので、Reduxでグローバルステートの管理を検討中
 export const metadata: Metadata = {
   title: 'ダミー ｜ E-Book dealer',
   description: 'ダミーページです。',
 };
 
-export default async function Home({ params }: Props): Promise<ReactElement> {
+export default async function Home({ params }: { params: { id: string } }): Promise<ReactElement> {
   const URL = process.env.NEXT_PUBLIC_URL;
 
   return (

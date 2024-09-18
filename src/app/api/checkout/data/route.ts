@@ -11,6 +11,7 @@ export async function POST(request: Request) {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
     if (!session.client_reference_id || !session.metadata?.bookId) {
+      console.log(`%c ${sessionId}`, 'background-color: red; color: black;');
       return NextResponse.json({ error: 'Invalid session data' }, { status: 500 });
     }
 

@@ -4,7 +4,13 @@ import { Button } from '@/components/elements/Button/Button';
 import { Article } from '@/types/microcms/client.types';
 import { useRouter } from 'next/navigation';
 
-export const CheckoutButton = ({ article }: { article: Article }) => {
+export const CheckoutButton = ({
+  article,
+  userId,
+}: {
+  article: Article;
+  userId: string | undefined;
+}) => {
   const router = useRouter();
   // 決済処理
   const checkoutHandler = async () => {
@@ -15,7 +21,7 @@ export const CheckoutButton = ({ article }: { article: Article }) => {
         title: article?.title,
         price: article?.price,
         articleId: article?.id,
-        userId: // TODO: ここにUSER.IDを渡す。
+        userId,
       }),
     });
 
