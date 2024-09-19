@@ -12,6 +12,7 @@ export const CheckoutButton = ({
   userId: string | undefined;
 }) => {
   const router = useRouter();
+
   // 決済処理
   const checkoutHandler = async () => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout/`, {

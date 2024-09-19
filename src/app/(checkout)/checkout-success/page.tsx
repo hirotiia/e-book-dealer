@@ -26,8 +26,6 @@ export default async function CheckoutSuccessPage({
         }),
       });
 
-      console.log(response);
-
       if (response.ok) {
         const data = await response.json();
         console.log(data);
