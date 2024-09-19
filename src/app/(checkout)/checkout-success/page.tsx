@@ -1,8 +1,14 @@
 import { Footer } from '@/components/layouts/Footer/Footer';
 import { Header } from '@/components/layouts/Header/Header';
 import { HeadingLv1 } from '@/components/layouts/Heading/HeadingLv1';
+import { Purchase } from '@prisma/client';
 import { Metadata } from 'next';
 import { ReactElement } from 'react';
+
+type PurchaseResponseData = {
+  purchase?: Purchase;
+  message?: string;
+};
 
 export const metadata: Metadata = {
   title: '購入成功ページ ｜ E-Book dealer',
@@ -25,10 +31,12 @@ export default async function CheckoutSuccessPage({
           sessionId,
         }),
       });
+      console.log(response.json());
 
       if (response.ok) {
-        const data = await response.json();
-        console.log(data);
+        const data: PurchaseResponseData = await response.json();
+        const { purchase } = data;
+        console.log(purchase?.id);
       }
     } catch (error) {
       console.error(error);
