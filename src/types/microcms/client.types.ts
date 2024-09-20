@@ -14,4 +14,5 @@ export type Article = {
     height: number;
     width: number;
   };
+  content: string;
 } & MicroCMSDate;

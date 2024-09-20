@@ -21,3 +21,15 @@ export const getArticleList = async (): Promise<MicroCMSListResponse<Article>> =
 
   return listData;
 };
+
+export const getDetailArticle = async (contentId: string): Promise<Article> => {
+  const detailArticle = await client.getListDetail<Article>({
+    endpoint: 'e-book',
+    contentId,
+  });
+  console.log('-------------------------------');
+  console.log(detailArticle);
+  console.log('-------------------------------');
+
+  return detailArticle;
+};

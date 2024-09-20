@@ -31,7 +31,6 @@ export default async function CheckoutSuccessPage({
           sessionId,
         }),
       });
-      console.log(response.json());
 
       if (response.ok) {
         const data: PurchaseResponseData = await response.json();
