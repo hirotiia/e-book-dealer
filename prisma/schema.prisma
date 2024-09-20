@@ -11,8 +11,8 @@ generator client {
 
 // prismaがどのようにDBに接続するかを定義
 datasource db {
-  provider = "postgresql"
-  url      = env("POSTGRES_PRISMA_URL")
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL")
   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
@@ -26,7 +26,7 @@ model User {
   sessions      Session[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
-  perchase Purchase[]
+  perchase      Purchase[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -88,9 +88,9 @@ model Authenticator {
 }
 
 model Purchase {
-  id            String       @id @default(cuid())
-  userId        String
-  articleId        String
-  createdAt     DateTime @default(now())
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id        String   @id @default(cuid())
+  userId    String
+  articleId String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
