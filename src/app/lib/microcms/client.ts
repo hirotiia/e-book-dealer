@@ -27,9 +27,6 @@ export const getDetailArticle = async (contentId: string): Promise<Article> => {
     endpoint: 'e-book',
     contentId,
   });
-  console.log('-------------------------------');
-  console.log(detailArticle);
-  console.log('-------------------------------');
 
   return detailArticle;
 };

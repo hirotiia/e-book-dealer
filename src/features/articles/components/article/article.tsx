@@ -11,7 +11,6 @@ export const ArticlePage = async ({ params }: { params: { id: string } }) => {
   const user = session?.user;
   const article = contents.find((content) => content.id === params.id);
   const articleContents = await getDetailArticle(params.id);
-  console.log(articleContents);
 
   return (
     <>
