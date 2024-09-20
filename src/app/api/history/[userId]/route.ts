@@ -6,11 +6,11 @@ export async function GET(request: Request, params: { userId: string }) {
   const { userId } = params;
 
   try {
-    const isPurchased = await prisma.purchase.findMany({
+    const history = await prisma.purchase.findMany({
       where: { userId },
     });
 
-    return NextResponse.json(isPurchased);
+    return NextResponse.json(history);
   } catch (error) {
     return NextResponse.json(error);
   }
