@@ -18,7 +18,7 @@ export const Products = async () => {
   const history = (await response.json()) as History[];
 
   // 購入済みかどうかの判定
-  const isMatchId = (id: string): boolean => {
+  const isPurchased = (id: string): boolean => {
     return history.some((target) => target.articleId === id);
   };
 
@@ -27,7 +27,7 @@ export const Products = async () => {
       <div className="grid grid-cols-custom gap-10">
         {contents &&
           contents.map((content) =>
-            isMatchId(content.id) ? (
+            isPurchased(content.id) ? (
               <Panel
                 key={content.id}
                 id={content.id}
